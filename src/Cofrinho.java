@@ -18,6 +18,7 @@ public class Cofrinho {
                 switch (op){
                     case 1://adiciona dolar
                         moedinhas.add(new Dolar(moeda));
+
                         break;
                     case 2:
                         moedinhas.add(new Euro(moeda));
