@@ -5,6 +5,7 @@ public class Cofrinho {
 
     ArrayList<Moeda> moedinhas = new ArrayList<Moeda>();
     Scanner in = new Scanner(System.in);
+
     double mTotal = 0;
 
     Dolar d = new Dolar();
