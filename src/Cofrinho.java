@@ -5,11 +5,10 @@ public class Cofrinho {
 
     ArrayList<Moeda> moedinhas = new ArrayList<Moeda>();
     Scanner in = new Scanner(System.in);
-
-    double mTotal = 0;
-
     Dolar d = new Dolar();
     Euro e = new Euro();
+
+    double mTotal = 0;
 
     public double adicionar(double moeda){
 
@@ -18,7 +17,6 @@ public class Cofrinho {
                 switch (op){
                     case 1://adiciona dolar
                         moedinhas.add(new Dolar(moeda));
-
                         break;
                     case 2:
                         moedinhas.add(new Euro(moeda));
@@ -30,7 +28,6 @@ public class Cofrinho {
                         System.out.println("comando invalido");
                         break;
                 }
-
         return moeda;
     }
 
@@ -60,21 +57,26 @@ public class Cofrinho {
 
 
     public void totalConvertido(){
-        double dolar = 0;
+        double total = 0;
         double euro = 0;
         double real = 0;
         for( Moeda m: moedinhas){
             if (m instanceof Dolar) {
-
-                System.out.println(d.converter(m.valor));
-               // dolar += m.valor * 5.24;
+               m.converter(m.valor);
+               m.info();
             } else if (m instanceof  Euro) {
-                euro+=m.valor * 5.54;
+                m.converter(m.valor);
+                m.info();
             }else if (m instanceof  Real){
-                real+=m.valor;
+                m.converter(m.valor);
+                m.info();
             }
         }
-      //  System.out.printf("\nO porquinho esta com um total de: %.2f", mTotal);
+        for (Moeda m: moedinhas) {
+            total+=m.valor;
+        }
+
+        System.out.printf("\nO porquinho esta com um total de: %.2f", total);
     }
 
 }

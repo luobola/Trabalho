@@ -8,9 +8,11 @@ public class Dolar extends Moeda{
     }
 
     public void info(){
-        System.out.println("valor: "+ valor);
+        System.out.printf("\nValor Convertido(dolar): %.2f ", valor);
 
     }
+
+    @Override
     public double converter(double valor){
         this.valor = valor * 5.24;//cotação do dia 24/06/2022
         return valor;
