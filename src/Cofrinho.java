@@ -1,15 +1,33 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Cofrinho {
 
     ArrayList<Moeda> moedinhas = new ArrayList<Moeda>();
-    Real r = new Real();
-    Dolar d = new Dolar();
-    Euro e = new Euro();
+    Scanner in = new Scanner(System.in);
     double mTotal = 0;
 
+    Dolar d = new Dolar();
+
     public double adicionar(double moeda){
-        moedinhas.add(new Dolar(moeda));
+
+        System.out.println("Qual moeda? " + "\n" + "1 - dolar"+ "\n" + "2 - Euro"+ "\n" + "3 - Real");
+            int op = in.nextInt();
+                switch (op){
+                    case 1://adiciona dolar
+                        moedinhas.add(new Dolar(d.converter(moeda)));
+                        break;
+                    case 2:
+                        moedinhas.add(new Euro(moeda));
+                        break;
+                    case 3:
+                        moedinhas.add(new Real(moeda));
+                        break;
+                    default:
+                        System.out.println("comando invalido");
+                        break;
+                }
+
         return moeda;
     }
 
@@ -51,7 +69,7 @@ public class Cofrinho {
                 real+=m.valor;
             }
         }
-            System.out.printf("\nO porquinho esta com um total de: %.2f", d.converter(dolar)+e.converter(euro)+real);
+           // System.out.printf("\nO porquinho esta com um total de: %.2f", d.converter(dolar)+e.converter(euro)+real);
     }
 
     @Override

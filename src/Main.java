@@ -21,15 +21,12 @@ public class Main {
 
                     switch (op){
                         case 1 ://adicionar moeda
-                            System.out.println("Quanto deseja depositar(Dollar)? " + "\n" + ">.");
-                            double vDolar = entrada.nextDouble();
-                            oPorquinho.moedinhas.add(new Dolar(vDolar));
-                            System.out.println("Quanto deseja depositar?(Euro) " + "\n" + ">.");
-                            double vEuro = entrada.nextDouble();
-                            oPorquinho.moedinhas.add(new Euro(vEuro));
-                            System.out.println("Quanto deseja depositar?(Real) " + "\n" + ">.");
-                            double vReal = entrada.nextDouble();
-                            oPorquinho.moedinhas.add(new Real(vReal));
+                            System.out.println("Quanto quer por? " + "\n" + ">.");
+                            double vMoeda = entrada.nextDouble();
+
+                            oPorquinho.adicionar(vMoeda);
+
+
 
 
                             oPorquinho.listagemMoeda();
