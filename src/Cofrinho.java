@@ -12,7 +12,10 @@ public class Cofrinho {
 
     public double adicionar(double moeda){
 
-        System.out.println("Qual moeda? " + "\n" + "1 - dolar"+ "\n" + "2 - Euro"+ "\n" + "3 - Real");
+        System.out.println("Qual Moeda? "
+                            + "\n" + "1 - Dolar"
+                            + "\n" + "2 - Euro"
+                            + "\n" + "3 - Real");
             int op = in.nextInt();
                 switch (op){
                     case 1://adiciona dolar
@@ -45,9 +48,9 @@ public class Cofrinho {
             if (m instanceof Dolar) {
                 doleta += m.valor;
             } else if (m instanceof  Euro) {
-                eurinho+=m.valor;
+                eurinho += m.valor;
             }else if (m instanceof  Real){
-                realzin+=m.valor;
+                realzin += m.valor;
             }
         }
         System.out.printf("\nTotal Em Dolar: %.2f" +
@@ -58,8 +61,6 @@ public class Cofrinho {
 
     public void totalConvertido(){
         double total = 0;
-        double euro = 0;
-        double real = 0;
         for( Moeda m: moedinhas){
             if (m instanceof Dolar) {
                m.converter(m.valor);
@@ -72,11 +73,10 @@ public class Cofrinho {
                 m.info();
             }
         }
-        for (Moeda m: moedinhas) {
-            total+=m.valor;
-        }
-
-        System.out.printf("\nO porquinho esta com um total de: %.2f", total);
+            for (Moeda m: moedinhas) {
+                total += m.valor;
+            }
+            System.out.printf("\nO porquinho esta com um total de: %.2f", total);
     }
 
 }
