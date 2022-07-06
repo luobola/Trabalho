@@ -26,9 +26,6 @@ public class Main {
 
                             oPorquinho.adicionar(vMoeda);
 
-
-
-
                             oPorquinho.listagemMoeda();
 
                             break;
