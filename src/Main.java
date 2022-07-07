@@ -22,13 +22,11 @@ public class Main {
                         switch (op){
                             case 1 ://adicionar moeda
                                 System.out.println("Quanto quer por? " + "\n" + ">.");
-                                double vMoeda = entrada.nextDouble();
-                                oPorquinho.adicionar(vMoeda);
+                                oPorquinho.adicionar(entrada.nextDouble());
                                 break;
                             case 2 ://retirar moeda
                                 System.out.println("Quanto quer retirar? " + "\n" + ">.");
-                                double v2Moeda = entrada.nextDouble();
-                                oPorquinho.remover(v2Moeda);
+                                oPorquinho.remover(entrada.nextDouble());
                                 break;
                             case 3 ://listar as moedas
                                 oPorquinho.listagemMoeda();
@@ -41,3 +39,6 @@ public class Main {
         }
     }
 }
+
+/* double vMoeda = entrada.nextDouble();
+double v2Moeda = entrada.nextDouble();*/
