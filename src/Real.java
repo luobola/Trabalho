@@ -14,7 +14,7 @@ public class Real extends  Moeda{
     @Override
     public double converter(double valor){
         this.valor = valor;
-        return valor;
+        return this.valor;
     }
 
 }

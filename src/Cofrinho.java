@@ -3,15 +3,11 @@ import java.util.Scanner;
 
 public class Cofrinho {
 
-    ArrayList<Moeda> moedinhas = new ArrayList<Moeda>();
+    private ArrayList<Moeda> moedinhas = new ArrayList<Moeda>();
     Scanner in = new Scanner(System.in);
-    Dolar d = new Dolar();
-    Euro e = new Euro();
 
-    double mTotal = 0;
-
+    //double mTotal = 0;
     public double adicionar(double moeda){
-
         System.out.println("Qual Moeda? "
                             + "\n" + "1 - Dolar"
                             + "\n" + "2 - Euro"
@@ -41,42 +37,38 @@ public class Cofrinho {
 
 
     public void listagemMoeda(){
-        double doleta = 0;
-        double eurinho = 0;
-        double realzin = 0;
-        for( Moeda m: moedinhas){
-            if (m instanceof Dolar) {
-                doleta += m.valor;
-            } else if (m instanceof  Euro) {
-                eurinho += m.valor;
-            }else if (m instanceof  Real){
-                realzin += m.valor;
-            }
+        for (Moeda m: moedinhas) {
+            m.info();
         }
-        System.out.printf("\nTotal Em Dolar: %.2f" +
-                          "\nTotal Em Euro : %.2f "+
-                          "\nTotal em Reais: %.2f ", doleta,eurinho,realzin);
     }
 
 
     public void totalConvertido(){
-        double total = 0;
-        for( Moeda m: moedinhas){
-            if (m instanceof Dolar) {
-               m.converter(m.valor);
-               m.info();
-            } else if (m instanceof  Euro) {
-                m.converter(m.valor);
-                m.info();
-            }else if (m instanceof  Real){
-                m.converter(m.valor);
-                m.info();
+        double v1 = 0;
+        double v2 = 0;
+        double v3 = 0;
+        Dolar d = new Dolar();
+        Euro e = new Euro();
+        Real r = new Real();
+            for( Moeda m: moedinhas){
+                if (m instanceof Dolar) {
+                    v1 += m.valor;
+                } else if (m instanceof  Euro) {
+                    v2 += m.valor;
+                } else if (m instanceof  Real) {
+                    v3 += m.valor;
+                }
             }
-        }
-            for (Moeda m: moedinhas) {
-                total += m.valor;
-            }
-            System.out.printf("\nO porquinho esta com um total de: %.2f", total);
+                System.out.printf("\nO porquinho esta com um total de: %.2f", d.converter(v1)+e.converter(v2)+r.converter(v3));
+
+    }
+
+    public ArrayList<Moeda> getMoedinhas() {
+        return moedinhas;
+    }
+
+    public void setMoedinhas(ArrayList<Moeda> moedinhas) {
+        this.moedinhas = moedinhas;
     }
 
 }
