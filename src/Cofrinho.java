@@ -16,10 +16,10 @@ public class Cofrinho {
                     case 1://adiciona dolar
                         getMoedinhas().add(new Dolar(moeda));
                         break;
-                    case 2:
+                    case 2://adiciona Euro
                         getMoedinhas().add(new Euro(moeda));
                         break;
-                    case 3:
+                    case 3://adiciona real
                         getMoedinhas().add(new Real(moeda));
                         break;
                     default:
@@ -37,7 +37,7 @@ public class Cofrinho {
             int op = in.nextInt();
                 switch (op) {
                     case 1:
-                        for( Moeda m: getMoedinhas()) {
+                        for( Moeda m: getMoedinhas()) {//metodos para remover valores independente da conversão
                             if (m instanceof Dolar) {
                                 m.valor -= moeda;
                             }
@@ -70,7 +70,7 @@ public class Cofrinho {
         Dolar d = new Dolar();
         Euro e = new Euro();
         Real r = new Real();
-            for( Moeda m: getMoedinhas()){
+            for( Moeda m: getMoedinhas()){//acumulando valores para soma total, com a conversão das moedas
                 if (m instanceof Dolar) {
                     v1 += m.valor;
                 } else if (m instanceof  Euro) {
