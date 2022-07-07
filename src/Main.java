@@ -33,7 +33,7 @@ public class Main {
                             case 3 ://listar as moedas
                                 oPorquinho.listagemMoeda();
                                 break;
-                            case 4 ://total de dinheiro
+                            case 4 ://total de dinheiro com a conversão ja feita
                                 oPorquinho.totalConvertido();
                                 break;
                         }
