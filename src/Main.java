@@ -26,6 +26,9 @@ public class Main {
                                 oPorquinho.adicionar(vMoeda);
                                 break;
                             case 2 ://retirar moeda
+                                System.out.println("Quanto quer retirar? " + "\n" + ">.");
+                                double v2Moeda = entrada.nextDouble();
+                                oPorquinho.remover(v2Moeda);
                                 break;
                             case 3 ://listar as moedas
                                 oPorquinho.listagemMoeda();

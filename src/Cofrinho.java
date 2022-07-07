@@ -31,9 +31,26 @@ public class Cofrinho {
     }
 
     public double remover(double moeda){
-
-        return moeda;
-        }
+        System.out.println("Qual Moeda? "
+                + "\n" + "1 - Dolar"
+                + "\n" + "2 - Euro"
+                + "\n" + "3 - Real");
+            int op = in.nextInt();
+                switch (op) {
+                    case 1:
+                        for( Moeda m: moedinhas){
+                            if (m instanceof Dolar) {
+                                m.valor -= moeda;
+                            } else if (m instanceof  Euro) {
+                                m.valor -= moeda;
+                            } else if (m instanceof  Real) {
+                                m.valor -= moeda;
+                            }
+                        }
+                        break;
+                }
+    return moeda;
+    }
 
 
     public void listagemMoeda(){
@@ -62,13 +79,4 @@ public class Cofrinho {
                 System.out.printf("\nO porquinho esta com um total de: %.2f", d.converter(v1)+e.converter(v2)+r.converter(v3));
 
     }
-
-    public ArrayList<Moeda> getMoedinhas() {
-        return moedinhas;
-    }
-
-    public void setMoedinhas(ArrayList<Moeda> moedinhas) {
-        this.moedinhas = moedinhas;
-    }
-
 }

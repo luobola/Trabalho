@@ -6,9 +6,9 @@ public class Dolar extends Moeda{
 
     public Dolar() {
     }
-
+    @Override
     public void info(){
-        System.out.printf("\nValor do Dolar: %.2f ", valor);
+        System.out.printf("\nDolar: %.2f ", valor);
 
     }
 

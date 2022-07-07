@@ -7,8 +7,9 @@ public class Real extends  Moeda{
     public Real() {
     }
 
+    @Override
     public void info(){
-        System.out.printf("\nValor Convertido: %.2f", valor);
+        System.out.printf("\nReais: %.2f", valor);
     }
 
     @Override

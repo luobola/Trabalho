@@ -8,8 +8,9 @@ public class Euro extends Moeda{
     public Euro() {
     }
 
+    @Override
     public void info(){
-        System.out.printf("\nValor Convertido(Euro): %.2f", valor);
+        System.out.printf("\nEuro: %.2f", valor);
 
     }
     @Override
