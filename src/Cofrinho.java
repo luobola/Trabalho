@@ -38,20 +38,31 @@ public class Cofrinho {
                 switch (op) {
                     case 1:
                         for( Moeda m: getMoedinhas()) {//metodos para remover valores independente da conversão
-                            if (m instanceof Dolar) {
+                            if (m instanceof Dolar && moeda <= m.valor) {
                                 m.valor -= moeda;
+                            }else {
+                                System.out.println("Você não Tem tudo isso para retirar!!!");
+                                break;
                             }
                         }
+                        break;
                     case 2:
                         for (Moeda m: getMoedinhas() ) {
-                            if (m instanceof Euro) {
+                            if (m instanceof Euro && moeda <= m.valor) {
                                 m.valor -= moeda;
+                            }else {
+                                System.out.println("Você não Tem tudo isso para retirar!!!");
+                                break;
                             }
                         }
+                        break;
                     case 3:
                         for (Moeda m:getMoedinhas() ) {
-                            if (m instanceof  Real) {
+                            if (m instanceof  Real && moeda <= m.valor) {
                                 m.valor -= moeda;
+                            }else {
+                                System.out.println("Você não Tem tudo isso para retirar!!!");
+                                break;
                             }
                         }
                         break;
