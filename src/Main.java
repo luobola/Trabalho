@@ -6,6 +6,8 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         int op = 9;
             while(op != 0) {
+
+                System.out.println();
                 System.out.println("=== Bem vindo ao Porquinho ===");
                 System.out.println("1) Por Dinheiro?" + "\n"
                                  + "2) Retirar Dinheiro?" + "\n"

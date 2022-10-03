@@ -13,7 +13,7 @@ public class Euro extends Moeda{
     }
     @Override
     public double converter(double valor){
-        this.valor = valor * 5.54;//cotação do dia 24/06/2022
-        return this.valor;
+        super.valor = valor * 5.54;//cotação do dia 24/06/2022
+        return super.valor;
     }
 }
